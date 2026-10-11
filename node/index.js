@@ -3,7 +3,7 @@
 const https = require('https');
 const { URL } = require('url');
 
-const VERSION = '1.0.0';
+const VERSION = '1.0.1';
 const DEFAULT_BASE = 'https://www.selldatatoai.com/api/v1';
 const USER_AGENT = `selldatatoai-node/${VERSION} (+https://www.selldatatoai.com)`;
 const BATCH_MAX = 100;

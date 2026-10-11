@@ -1,8 +1,8 @@
 # selldatatoai
 
-Official clients and examples for the Data Asset Score API, the scoring service behind the [Sell Data to AI website](https://www.selldatatoai.com/).
+Official clients and examples for the AI Data Value Score API, the scoring service behind the [Sell Data to AI website](https://www.selldatatoai.com/).
 
-The API answers one question about any company domain: how much of the data AI buyers want does this company likely hold? The answer is a score from 0 to 100, a grade from A to E, the company status, the systems of record it runs, the data types it likely holds and its web history. It is computed against an index of 102 million domains, 99.99% of the active internet, with history for each domain.
+The API answers one question about any company domain: how much of the data AI buyers want does this company likely hold? The answer is a score from 0 to 100, a grade from A to E, the company status, the systems of record it runs, the data types it likely holds and its web history. It is computed against an index of 120 million domains, 99.99% of the active internet, with history for each domain.
 
 This repository holds the Node.js and Python clients. Clients for six more languages live in their own repositories, listed below.
 
@@ -34,7 +34,7 @@ Authentication: an `X-API-Key` header on every request. Keys are issued in your 
 | GET | `/score/batch?id={id}` | Poll a batch | 0 |
 | GET | `/usage` | Plan, lookups used and remaining | 0 |
 
-The full field reference lives in the [Data Asset Score API docs](https://www.selldatatoai.com/api/).
+The full field reference lives in the [AI Data Value Score API docs](https://www.selldatatoai.com/api/).
 
 ### With curl
 
@@ -94,7 +94,7 @@ best = sorted((i["result"] for i in items if i["status"] == "done"),
 | `likely_data_assets` | Record types the company likely holds. |
 | `strengths` | Up to three factor groups where the company is strongest. |
 | `data_coverage` | `full`, `partial` or `limited`: how complete the signals were. |
-| `in_index` | The domain is in the 102M index. |
+| `in_index` | The domain is in the 120M index. |
 | `checked_at`, `cached` | When the result was taken; whether it was reused from the last 30 days. |
 
 ## Errors
@@ -152,7 +152,7 @@ Whichever tier a seller picks, the work before an offer is the same. The checkli
 
 ## Lists
 
-The API scores the domains you send and never returns lists. Lists are sold separately as one-time files: the top 3,000 US companies of a sector by score, from $249 a list, with download links sent by email. One example is the [marketing agencies list](https://www.selldatatoai.com/lists/marketing-agencies/). Lists by data type are sold next to the sector lists.
+The API scores the domains you send and never returns lists. Lists are sold separately as one-time files: the top 3,000 US companies of a sector by score, from $199 a list, with download links sent by email. One example is the [marketing agencies list](https://www.selldatatoai.com/lists/marketing-agencies/). Lists by data type are sold next to the sector lists.
 
 ## Plans
 
@@ -166,9 +166,9 @@ There is no free plan and no trial. The demo on the website allows 5 checks a da
 
 ## FAQ
 
-### What is the Data Asset Score API?
+### What is the AI Data Value Score API?
 
-The Data Asset Score API, from selldatatoai.com, scores any company domain from 0 to 100 for the data AI buyers want. It returns a grade, status, systems of record, likely data assets and web history, from an index of 102 million domains.
+The AI Data Value Score API, from selldatatoai.com, scores any company domain from 0 to 100 for the data AI buyers want. It returns a grade, status, systems of record, likely data assets and web history, from an index of 120 million domains.
 
 ### Which client should I use?
 
